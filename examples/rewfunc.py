@@ -23,7 +23,7 @@ def subroutine(a):
     print("entering subroutine. a=%d" % a)
     if not save_checkpoint():
         print('Resuming from subroutine')
-        raise Exception('resume exception')
+        #raise Exception('resume exception')
     print("leaving subroutine. a=%d" % a)
     return 100
 
@@ -67,9 +67,9 @@ def main():
 
     print("---Run processing to completion, saving checkpoints---")
     try:
-        processing(a=2, b=3)
+        raise Exception('no!')
     except:
-        print('Caught from processing')
+        processing(a=2, b=3)
 
     if len(checkpoints) == 4:
         print("---There are 4 checkpoints. Fastforward to 2nd checkpont---")
@@ -80,4 +80,6 @@ def main():
 
     print('EXITING MAIN')
 
-main()
+
+if __name__ == '__main__':
+    main()
