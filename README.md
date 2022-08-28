@@ -1,3 +1,5 @@
+*This repo is stale. Please see [python-checkpointing2](https://github.com/traff/python-checkpointing2) for a better implementation.*
+
 # Checkpointing Data Processing Programs
 
 If you write data processing pipelines that take hours to run on your desktop,
